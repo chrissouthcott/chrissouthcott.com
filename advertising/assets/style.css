@@ -29,15 +29,6 @@ a{
 .container{
 }
 
-.hide{
-
-}
-
-.no-scroll{
-	overflow-x:hidden;
-	overflow-y:initial;
-}
-
 .button{
 	background-image: linear-gradient(135deg, #53B9EA 0%, #1E97D1 100%);
 	box-shadow: 0 2px 7px 0 rgba(0,0,0,0.10);
@@ -45,7 +36,7 @@ a{
 	font-family: 'Open Sans', sans-serif;
 	text-transform: uppercase;
 	font-size: 12px;
-	font-weight: bold;
+	font-weight: bold; 
 	color: #FFF;
 	width: 190px;
 	text-align: center;
@@ -317,6 +308,7 @@ a{
 	background-image: url(first-background.jpg);
     background-size: cover;
     background-position:top center;
+    margin-bottom:3%;
 }
 
 .block-safety{
@@ -333,6 +325,22 @@ a{
 	margin-left:1.5%;
 	background-image: url(safety-background.jpg);
     background-size: cover;
+    margin-bottom:3%;
+}
+
+.block-brands{
+	width: 94%;
+    margin-left: 3%;
+    margin-right: 3%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.block-brands img{
+	height:60px;
 }
 
 .weather-icons{
@@ -393,34 +401,31 @@ a{
 }
 
 .box{
-	height: 90%;
-	min-height: 600px;
-	max-height: 800px;
-	width: 900px;
-	display: flex;
-	overflow: hidden;
-	background: #FFF;
-	align-items: center;
-	justify-content: center;
-	z-index: 2000;
+	position: relative;
+    height: auto;
+    padding: 50px;
+    width: 625px;
+    background: #FFF;
+    z-index: 2000;
 }
 
 .lightbox-form{
-	height: 90%;
-	overflow-y: scroll;
-	width: 500px;
-	display: flex;
-	justify-content: center;
+padding-top: 40px;
+    height: auto;
+    width: 625px;
 }
 
 .lightbox-branding{
-	width: 400px;
-	height: 100%;
-	background: #3196C4;
-	background-image: url(weatherzone-white.svg);
-	background-position: center;
-	background-repeat: no-repeat;
-	position:relative;
+    width: 725px;
+    height: 50px;
+    background: #3196C4;
+    background-image: url(weatherzone-white.svg);
+    background-position: 45px center;
+    background-repeat: no-repeat;
+    background-size: 130px;
+    top: 0;
+    left: 0;
+    position: absolute;
 }
 
 .close{
@@ -442,7 +447,7 @@ a{
 
 .footer{
     display: flex;
-    margin-top: 70px;
+	margin-top: 40px;
     background-image: url(footer-background.jpg);
     background-size: cover;
     width: 100vw;
@@ -497,6 +502,22 @@ padding: 0;
 		margin-right: 100px;
 	}
 
+.body-container{
+
+}
+
+#body-id{
+
+}
+
+.hide{
+	display:initial;
+}
+
+.start-advertising-toggle{
+	display:flex;
+}
+
 @media screen and (max-height: 700px), (max-width: 768px){
 	.hero{
 		height:620px;
@@ -508,6 +529,7 @@ padding: 0;
 }
 
 @media screen and (max-width: 1170px){
+
 	.footer{
 		height:auto;
 	}
@@ -588,38 +610,57 @@ padding: 0;
     text-align: center;
     margin-top: 30px;
 	}
-}
 
-@media screen and (max-width: 767px){
+	.block-brands img {
+		height: 45px;
+	}
 
-	.box{
-	height: 100vh;
-	    justify-content: flex-start;
-	    max-height: initial;
-	    min-height: initial;
-	    width: 100vw;
-	    align-items: flex-start;
-	    overflow: scroll;
-	    flex-direction: column;
+	.hide{
+		display:none;
+	}
+
+	.show{
+		display:flex !important;
+	}
+
+	.start-advertising-toggle{
+		display: block;
+		position: initial;
+		height: initial;
+		width: initial;
 	}
 
 	.lightbox-form{
 		height: auto;
-	    width: 100vw;
-	    padding-top: 60px;
+		width: 94%;
+		margin-left: 3%;
+		margin-right: 3%;
+		overflow: initial;
+		padding-top: 80px;
 	}
 
 	.lightbox-branding{
+		background-position: center;
+		display: flex;
+		height: 60px;
+		width: 100vw;
+		position: absolute;
 		top: 0;
-	    position: absolute;
-	    height: 50px;
-	    width: 100vw;
-		background-size: 30%;
 	}
 
-	.no-scroll{
-		overflow:hidden;
+	.box{
+		width: 100%;
+		overflow: initial;
+		padding: initial;
 	}
+
+	.close{
+		top: 15px;
+	}
+
+}
+
+@media screen and (max-width: 767px){
 
 	.block-story{
 		height:495px;
@@ -707,10 +748,6 @@ background-image: url(hero-background.jpg);
 		padding-bottom: 30px;
 		border-top: #3296c42b solid 1px;
 		width: 100%;
-	}
-
-	.hide{
-		display:flex !important;
 	}
 
 	a.navigation-dropdown{
