@@ -8,6 +8,12 @@ html,body{
 	-webkit-animation: background 10s ease infinite;
     -moz-animation: background 10s ease infinite;
     animation: background 10s ease infinite;
+    display:flex;
+	width:100%;
+	height:100%;
+	align-items: center;
+	justify-content: center;
+	overflow:hidden;
 }
 
 h1,a,p{
@@ -29,11 +35,8 @@ a{
 }
 
 .container{
-	display:flex;
-	width:100vw;
-	height:100vh;
-	align-items: center;
-	justify-content: center;
+	width:auto;
+	height:auto;
 }
 
 @-webkit-keyframes background {
@@ -50,4 +53,10 @@ a{
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
+}
+
+@media screen and (max-width: 768px){
+	h1{
+		font-size:30px;
+	}
 }
