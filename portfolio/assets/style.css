@@ -1,0 +1,208 @@
+html,body{
+	padding:0;
+	margin:0;
+	background:#212223;
+	overflow-x: hidden;
+}
+
+h1,h2,h3{
+	font-family: 'Poppins', sans-serif;
+}
+
+h1,h2,h3,h4{
+	color:#FFF;
+	margin:0;
+}
+
+h1{
+	font-size:100px;
+}
+
+h2{
+	font-size:40px;
+}
+
+h3{
+	font-size:23px;
+	line-height: 37px;
+}
+
+h4{
+	font-family: 'Playfair Display', serif;
+	font-size:20px;
+	font-weight:300;
+}
+
+.scroll{
+    position: fixed;
+    width: 100vw;
+    height: 70px;
+    bottom: 0;
+    text-align: center;
+	font-family: Poppins;
+	font-size: 16px;
+	color: #FFFFFF;
+	opacity: 0.5;
+}
+
+.block{
+    height: 90vh;
+    min-height:700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.work{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item{
+	background:#FFF;
+	height:300px;
+	width:1000px;
+}
+
+.hero{
+	width:1000px;
+	height:600px;
+}
+
+.hero .details{
+    margin-top: 90px;
+}
+
+
+.hero .right-pane{
+	position: relative;
+    margin-right: -165px;
+    margin-top: -15px;
+}
+
+.hero h1{
+	width: 550px;
+    line-height: 92px;
+}
+
+.hero h3.list1{
+	opacity: 0.6;
+	font-size:23px;
+}
+
+.hero h3.list2{
+	opacity: 0.4;
+	font-size:23px;
+}
+
+.hero h3.list3{
+	opacity: 0.3;
+	filter: blur(1px);
+	font-size:23px;
+}
+
+.hero h3.list4{
+	opacity: 0.2;
+	filter: blur(3px);
+	font-size:14px;
+}
+
+.hero h4{
+	position: absolute;
+    left: 50%;
+    margin-left: -175px;
+    margin-top: -30px;
+    transform: rotate(-17.5deg);
+}
+
+.hero .image{
+	background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.hero .profile{
+	width:295px;
+	height:438px;
+	background-image:url('profile.jpg');
+	box-shadow: 0px 0px 100px 54px rgba(0, 0, 0, 0.25);
+	position: absolute;
+	left: 50%;
+	margin-left: 120px;
+	margin-top: -400px;
+	z-index: 300;
+}
+
+.hero .qr{
+	width: 100px;
+	height: 100px;
+	background-image: url(qr.png);
+	position: absolute;
+	left: 50%;
+	margin-left: 361px;
+	margin-top: -16px;
+	z-index: 400;
+}
+
+.hero .arrow{
+	width: 189px;
+	height: 112px;
+	background-image: url(arrow.png);
+	position: absolute;
+	left: 50%;
+	margin-left: -90px;
+	margin-top: -105px;
+}
+
+.hero .circle1{
+	width: 100px;
+	height: 100px;
+	background-image: url(circle1.png);
+	position: absolute;
+	left: 50%;
+	margin-left: 360px;
+	margin-top: -355px;
+}
+
+.hero .circle2{
+	width: 150px;
+	height: 150px;
+	background-image: url(circle2.png);
+	position: absolute;
+	left: 50%;
+	margin-left: 350px;
+	margin-top: -438px;
+}
+
+@media screen and (max-width: 1000px){
+
+	.hero{
+		width:initial;
+		height:initial;
+	}
+
+	.hero .details{
+		margin-left: 10px;
+	}
+
+	.hero h1{
+		width:50%;
+		font-size: 45px;
+		line-height: initial;
+	}
+	.hero h2{
+		font-size:20px;
+	}
+	.hero h3.list1{
+		font-size:13px;
+	}
+	.hero h3.list2{
+		font-size:13px;
+	}
+	.hero h3.list3{
+		font-size:13px;
+	}
+	.hero h3.list4{
+		font-size:10px;
+	}
+}
