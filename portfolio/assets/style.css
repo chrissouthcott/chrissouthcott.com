@@ -3,6 +3,7 @@ html,body{
 	margin:0;
 	background:#212223;
 	overflow-x: hidden;
+	width:100vw;
 }
 
 h1,h2,h3{
@@ -46,17 +47,31 @@ h4{
 }
 
 .block{
-    height: 90vh;
-    min-height:700px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-.work{
+.rulers{
+	width: 1000px;
+    height: 100vh;
+    border: 1px dashed #FFF;
+    position: fixed;
+    left: 50%;
+    margin-left: -501px;
+}
+
+.block.hero{
+	height: 90vh;
+	min-height:670px;
 	display: flex;
-    align-items: center;
-    justify-content: center;
+	align-items: center;
+	justify-content: center;
+}
+
+.content.hero{
+	width: 79vw;
+	height: 600px;
+	display: flex;
+	max-width: 1100px;
+	position: relative;
 }
 
 .item{
@@ -65,20 +80,18 @@ h4{
 	width:1000px;
 }
 
-.hero{
-	width:1000px;
-	height:600px;
-}
-
 .hero .details{
-    margin-top: 90px;
+	margin-top: 125px;
+	width: 510px;
+	z-index: 1000;
 }
 
 
 .hero .right-pane{
-	position: relative;
-    margin-right: -165px;
-    margin-top: -15px;
+	position: absolute;
+	height: 600px;
+	width: 664px;
+	right: -6%;
 }
 
 .hero h1{
@@ -110,10 +123,9 @@ h4{
 
 .hero h4{
 	position: absolute;
-    left: 50%;
-    margin-left: -175px;
-    margin-top: -30px;
-    transform: rotate(-17.5deg);
+	margin-top: 70px;
+	margin-left: 10px;
+	transform: rotate(-17.5deg);
 }
 
 .hero .image{
@@ -122,14 +134,13 @@ h4{
 }
 
 .hero .profile{
-	width:295px;
-	height:438px;
-	background-image:url('profile.jpg');
-	box-shadow: 0px 0px 100px 54px rgba(0, 0, 0, 0.25);
+	width: 295px;
+	height: 438px;
+	background-image: url(profile.jpg);
+	box-shadow: 0px 0px 100px 54px rgb(0 0 0 / 25%);
 	position: absolute;
-	left: 50%;
-	margin-left: 120px;
-	margin-top: -400px;
+	margin-left: 300px;
+	margin-top: 100px;
 	z-index: 300;
 }
 
@@ -138,10 +149,17 @@ h4{
 	height: 100px;
 	background-image: url(qr.png);
 	position: absolute;
-	left: 50%;
-	margin-left: 361px;
-	margin-top: -16px;
+	margin-left: 540px;
+	margin-top: 490px;
 	z-index: 400;
+}
+
+.arrow-group{
+	position: relative;
+    height: 130px;
+    width: 280px;
+    margin-top: 400px;
+    margin-left: -8px;
 }
 
 .hero .arrow{
@@ -149,9 +167,7 @@ h4{
 	height: 112px;
 	background-image: url(arrow.png);
 	position: absolute;
-	left: 50%;
-	margin-left: -90px;
-	margin-top: -105px;
+	right: 0;
 }
 
 .hero .circle1{
@@ -159,9 +175,8 @@ h4{
 	height: 100px;
 	background-image: url(circle1.png);
 	position: absolute;
-	left: 50%;
-	margin-left: 360px;
-	margin-top: -355px;
+	margin-left: 540px;
+	margin-top: 145px;
 }
 
 .hero .circle2{
@@ -169,40 +184,185 @@ h4{
 	height: 150px;
 	background-image: url(circle2.png);
 	position: absolute;
-	left: 50%;
-	margin-left: 350px;
-	margin-top: -438px;
+	margin-left: 528px;
+	margin-top: 60px;
+}
+
+.new .content{
+	width: 90vw;
+    height: 300px;
+    background: #FFFF;
+    margin-top: 10px;
+}
+
+
+@media screen and (max-width: 1100px){
+.content.hero{
+	width: 85vw;
+}
 }
 
 @media screen and (max-width: 1000px){
+	.block.hero{
+		height: 920px;
+	}
 
-	.hero{
-		width:initial;
-		height:initial;
+	.content.hero{
+		height: 900px;
 	}
 
 	.hero .details{
-		margin-left: 10px;
+		margin-top: initial;
+		bottom: 60px;
+		position: absolute;
 	}
 
-	.hero h1{
-		width:50%;
-		font-size: 45px;
-		line-height: initial;
+	.hero .right-pane{
+		right: 0;
 	}
-	.hero h2{
-		font-size:20px;
+
+	.hero .arrow-group{
+		margin-top: 270px;
 	}
-	.hero h3.list1{
-		font-size:13px;
-	}
-	.hero h3.list2{
-		font-size:13px;
-	}
-	.hero h3.list3{
-		font-size:13px;
-	}
-	.hero h3.list4{
-		font-size:10px;
+
+	.content.hero{
+		width: 90vw;
 	}
 }
+
+
+@media screen and (max-width: 719px){
+
+.block.hero{
+    height: 90vh;
+    min-height:450px;
+}
+
+.content.hero{
+	width: initial;
+    height: initial;
+    display: initial;
+    position: initial;
+    max-width: initial;
+    height: 450px;
+    width: 100%;
+    position: relative;
+}
+
+.hero .arrow-group{
+	margin-top: 175px;
+    width: 145px;
+    height: 70px;
+    left: 31px;
+    z-index: 400;
+}
+
+.hero .details{
+	left: 10px;
+	bottom: 0;
+	width: initial;
+}
+
+
+.hero .right-pane{
+width: 310px;
+    height: 300px;
+    top: 0;
+    right: 0;
+}
+
+.hero h1{
+	font-size:50px;
+	line-height:50px;
+	width:270px;
+}
+
+.hero h2{
+	font-size:24px;
+	line-height:32px;
+}
+
+.hero h3.list1{
+	font-size:13px;
+	line-height:20px;}
+
+.hero h3.list2{
+	font-size:13px;
+	line-height:20px;
+}
+
+.hero h3.list3{
+	font-size:13px;
+	line-height:20px;}
+
+.hero h3.list4{
+	font-size:8px;
+	line-height:13px;
+}
+
+.hero h4{
+font-size: 12px;
+    margin-top: 38px;
+    margin-left: -2px;
+}
+
+.hero .profile{
+width: 162px;
+    height: 240px;
+    margin-left: 120px;
+    margin-top: 30px;
+}
+
+.hero .qr{
+    width: 55px;
+    height: 55px;
+    margin-left: initial;
+    margin-top: 245px;
+    right: 10px;
+}
+
+.hero .arrow{
+width: 104px;
+    height: 62px;
+}
+
+.hero .circle1{
+    width: 54px;
+    height: 54px;
+    margin-left: initial;
+    right: 12px;
+    margin-top: 45px;
+}
+
+.hero .circle2{
+width: 82px;
+    height: 82px;
+    margin-left: initial;
+    right: 0px;
+    margin-top: 0px;
+}
+
+
+}
+
+/*@media screen and (max-width: 920px){
+	.rulers{
+		width: 668px;
+		margin-left: -335px;
+	}
+
+	.content.hero{
+		width: 668px;
+		height: 800px;
+	}
+
+	.hero .details{
+		margin-top: 480px;
+    	width: 510px;
+	}
+
+	.hero .right-pane{
+		margin-left: -485px;
+		margin-top: -100px;
+	}
+}*/
