@@ -15,133 +15,184 @@ BlankSlate is distributed under the terms of the GNU GPL
 */
 
 html,body{
-	margin:0;
 	padding:0;
-	background: #000;
-	background-image: linear-gradient(to top right, #000 40%, #ff009c 100%);
-	background-size: 200%;
-	background-attachment: fixed;
-	-webkit-animation: background 10s ease infinite;
-    -moz-animation: background 10s ease infinite;
-    animation: background 10s ease infinite;
+	margin:0;
+	background:#212223;
 }
 
-h1,h2,h3,a,p{
-	font-family: Arial, Helvetica, sans-serif;
+h1,h2,h3,h4,p,a{
+	font-family: 'Poppins', sans-serif;
 	color:#FFF;
-}
-
-h1{
-	font-size:50px;
-}
-
-p{
-	color:#FFF;
-}
-
-a{
-    color: #FFF;
-    text-decoration: none;
 }
 
 .main{
 	width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-}
-
-.cover{
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-
-.cover h1, .cover h2{
-	text-align:center;
+	height: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .container{
-	width:auto;
-	height:auto;
+	width: 1170px;
 }
 
-.content{
-	width: 1100px;
+.hero{
+	width: 100%;
+    display: flex;
+    height: 70vh;
+    align-items: center;
+    justify-content: center;
+    min-height: 600px;
+    max-height: 1080px;
+    align-content: space-around;
+}
+
+.posts{
+	width: 70%;
+    margin-left: 15%;
 	display: flex;
+	justify-content: space-between;
 	flex-wrap: wrap;
 }
 
-.item{
-	width: 320px;
-	overflow: hidden;
-	margin: 20px;
+.post{
+    width: 100%;
+    margin-bottom: 3.5%;
 }
 
-.item-contents{
-	background: rgb(0 0 0 / 50%);
-	padding: 20px;
-	border: 1px solid #FFF;
+.post h1{
+	font-size:40px;
+	line-height:38px;
 }
 
-img.logo{
-	height:15px;
+.logo{
+    height: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-h1.project{
+.Finder{
+    background-image: url(/assets/finder.png);
+	width: 85px;
+}
+
+.Weatherzone{
+    background-image: url(/assets/weatherzone.png);
+    width: 150px;
+}
+
+.feature-image{
+	background-image:url(/wp-content/themes/blankslate/feature.jpg);
+	width:100%;
+	height:300px;
+	background-size:cover;
+}
+
+.block1 h1{
+	    font-size: 50px;
+    line-height: 48px;
+    font-weight: 600;
     margin: 0;
-    font-size: 30px;
-    width: inherit;
-    padding-bottom: 20px;
 }
 
-h2.skills{
+.block1 h2{
+font-size: 25px;
     margin: 0;
+    font-weight: 500;
+}
+
+.block1{
+height: 500px;
+    width: 45%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+a{
+	color:#FFF;
+	text-decoration:underline;
+}
+
+.post-content{
+	padding-bottom:5px;
+}
+
+a.tags, .post-tags a{
+	background: #ffffff73;
+    border-radius: 5px;
+    margin-right: 4px;
+    margin-bottom: 4px;
+    font-size: 13px;
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+    padding: 0px 10px 0px 10px;
+	float:left;
+}
+
+.post-tags a{
+	padding: 8px 10px 8px 10px;
+}
+
+a.tags, .post-tags a:hover{
+	background: #ffffffc9;
+    transition: 0.3s;
+}
+
+.block1 h3{
+	line-height: 37px;
+    width: 95%;
+}
+
+p.tags-title{
+	font-weight: 600;
     font-size: 14px;
-    width: inherit;
+    line-height: 10px;
+    text-transform: uppercase;
 }
 
-h2.skills a{
-	background: #FFF;
-	color: #000;
-	margin-right: 19px;
-	line-height: 25px;
+.block2{
+	height: 500px;
+    width: 25%;
+    background-image: url(/assets/2021/07/profile.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
-h2.company{
-	margin: 0;
-	font-size: 14px;
-	width: inherit;	
-}
+@media screen and (max-width: 1024px){
+    .container{
+        width: 90%;
+        margin: 5%;
+        max-width: 600px;
+    }
 
-h2.tag{
-	border-bottom: 1px solid rgb(255 255 255 / 50%);
-	font-size: 15px;
-	padding-bottom: 3px;
-}
+    .hero{
+        flex-direction: column;
+        height: auto;
+    }
 
-video{
-	width: 318px;
-	margin-left: -20px;
-}
+    .block1{
+        order: 2;
+        width: 100%;
+        height: auto;
+    }
 
-@-webkit-keyframes background {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-@-moz-keyframes background {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-@keyframes background {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
+    .block2{
+        width: 100%;
+        order: 1;
+        height: 200px;
+        background-size: contain;
+        background-position: left;
+        margin-bottom: 5%;
+    }
 
-@media screen and (max-width: 768px){
-	h1{
-		font-size:30px;
-	}
+    .posts{
+        width: 100%;
+        margin-left: initial;
+    }
+
 }
