@@ -1,0 +1,168 @@
+html,body{
+	padding:0;
+	margin:0;
+	background:#212223;
+}
+
+h1,h2,h3,h4,p{
+	font-family: 'Poppins', sans-serif;
+	color:#FFF;
+}
+
+.main{
+	width: 100%;
+	height: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.container{
+	width: 1170px;
+}
+
+.hero{
+	width: 100%;
+    display: flex;
+    height: 70vh;
+    align-items: center;
+    justify-content: center;
+    min-height: 600px;
+    max-height: 1080px;
+    align-content: space-around;
+}
+
+.posts{
+	width: 70%;
+    margin-left: 15%;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.post{
+    width: 100%;
+    margin-bottom: 3.5%;
+}
+
+.post h1{
+	font-size:40px;
+	line-height:38px;
+}
+
+.logo{
+    height: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.finder{
+    background-image: url(finder.png);
+	width: 85px;
+}
+
+.weatherzone{
+    background-image: url(weatherzone.png);
+    width: 150px;
+}
+
+.feature-image{
+	background-image:url(feature.jpg);
+	width:100%;
+	height:300px;
+	background-size:cover;
+}
+
+.block1 h1{
+	    font-size: 50px;
+    line-height: 48px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.block1 h2{
+font-size: 25px;
+    margin: 0;
+    font-weight: 500;
+}
+
+.block1{
+height: 500px;
+    width: 45%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.block1 a{
+	background: #ffffff73;
+    border-radius: 5px;
+    margin-right: 4px;
+    margin-bottom: 4px;
+    font-size: 13px;
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+    float: left;
+    padding: 0px 10px 0px 10px;
+}
+
+.block1 a:hover{
+	background: #ffffffc9;
+    transition: 0.3s;
+}
+
+.block1 h3{
+	line-height: 37px;
+    width: 95%;
+}
+
+.block1 p{
+	font-weight: 600;
+    font-size: 14px;
+    line-height: 10px;
+    text-transform: uppercase;
+}
+
+.block2{
+    height: 500px;
+    width: 25%;
+    background-image: url(profile.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@media screen and (max-width: 1024px){
+    .container{
+        width: 90%;
+        margin: 5%;
+        max-width: 600px;
+    }
+
+    .hero{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .block1{
+        order: 2;
+        width: 100%;
+        height: auto;
+    }
+
+    .block2{
+        width: 100%;
+        order: 1;
+        height: 200px;
+        background-size: contain;
+        background-position: left;
+        margin-bottom: 5%;
+    }
+
+    .posts{
+        width: 100%;
+        margin-left: initial;
+    }
+
+}

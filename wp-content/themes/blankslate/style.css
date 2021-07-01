@@ -1,0 +1,147 @@
+/*
+Theme Name: Chris Southcott portfolio (Based on BlankSlate)
+Theme URI: https://chrissouthcott.com/
+Author: Chris Southcott
+Author URI: https://chrissouthcott.com/
+Description: Very lightly based on BlankSlate for boilerplate.
+Version: 2019.1
+License: GNU General Public License
+License URI: https://www.gnu.org/licenses/gpl.html
+Tags: one-column, two-columns, custom-menu, featured-images, microformats, sticky-post, threaded-comments, translation-ready
+Text Domain: chrissouthcott
+
+BlankSlate WordPress Theme © 2011-2019 TidyThemes
+BlankSlate is distributed under the terms of the GNU GPL
+*/
+
+html,body{
+	margin:0;
+	padding:0;
+	background: #000;
+	background-image: linear-gradient(to top right, #000 40%, #ff009c 100%);
+	background-size: 200%;
+	background-attachment: fixed;
+	-webkit-animation: background 10s ease infinite;
+    -moz-animation: background 10s ease infinite;
+    animation: background 10s ease infinite;
+}
+
+h1,h2,h3,a,p{
+	font-family: Arial, Helvetica, sans-serif;
+	color:#FFF;
+}
+
+h1{
+	font-size:50px;
+}
+
+p{
+	color:#FFF;
+}
+
+a{
+    color: #FFF;
+    text-decoration: none;
+}
+
+.main{
+	width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.cover{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.cover h1, .cover h2{
+	text-align:center;
+}
+
+.container{
+	width:auto;
+	height:auto;
+}
+
+.content{
+	width: 1100px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.item{
+	width: 320px;
+	overflow: hidden;
+	margin: 20px;
+}
+
+.item-contents{
+	background: rgb(0 0 0 / 50%);
+	padding: 20px;
+	border: 1px solid #FFF;
+}
+
+img.logo{
+	height:15px;
+}
+
+h1.project{
+    margin: 0;
+    font-size: 30px;
+    width: inherit;
+    padding-bottom: 20px;
+}
+
+h2.skills{
+    margin: 0;
+    font-size: 14px;
+    width: inherit;
+}
+
+h2.skills a{
+	background: #FFF;
+	color: #000;
+	margin-right: 19px;
+	line-height: 25px;
+}
+
+h2.company{
+	margin: 0;
+	font-size: 14px;
+	width: inherit;	
+}
+
+h2.tag{
+	border-bottom: 1px solid rgb(255 255 255 / 50%);
+	font-size: 15px;
+	padding-bottom: 3px;
+}
+
+video{
+	width: 318px;
+	margin-left: -20px;
+}
+
+@-webkit-keyframes background {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes background {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes background {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+@media screen and (max-width: 768px){
+	h1{
+		font-size:30px;
+	}
+}
