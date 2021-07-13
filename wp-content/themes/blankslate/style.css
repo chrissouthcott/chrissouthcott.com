@@ -42,6 +42,16 @@ video{
 	overflow:hidden;
 }
 
+figure.wp-block-image.size-large {
+    padding: 0;
+    margin: 0;
+}
+
+.post-content img{
+    width:100%;
+    height:auto;
+}
+
 .hero{
 	width: 100%;
     display: flex;
@@ -63,7 +73,11 @@ video{
 
 .post{
     width: 100%;
-    margin-bottom: 3.5%;
+    margin-bottom: 100px;
+}
+
+.post-b{
+    margin-bottom:3.5%;
 }
 
 .post h1{
@@ -85,6 +99,12 @@ video{
 .Weatherzone{
     background-image: url(/assets/weatherzone.png);
     width: 150px;
+}
+
+.Beermogul{
+	background-image: url(/assets/beermogul.png);
+    width: 100px;
+    height: 60px;
 }
 
 .feature-image{
@@ -198,6 +218,11 @@ p.tags-title{
     .posts{
         width: 100%;
         margin-left: initial;
+    }
+
+    .post h1{
+        font-size: 32px;
+        line-break:anywhere;
     }
 
 }
