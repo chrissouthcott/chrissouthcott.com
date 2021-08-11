@@ -79,6 +79,7 @@ figure.wp-block-image.size-large {
 .post h1{
 	font-size:40px;
 	line-height:38px;
+	line-break: anywhere;
 }
 
 .logo{
@@ -215,5 +216,9 @@ p.tags-title{
         width: 100%;
         margin-left: initial;
     }
+	
+	.post h1{
+	font-size:34px;
+	}
 
 }
